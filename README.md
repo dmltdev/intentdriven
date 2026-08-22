@@ -21,9 +21,29 @@ Intent -> Spec -> Domain Knowledge -> Decisions -> Implementation -> Evidence ->
 | Execution / Evidence | `implement-feature`, `verify-feature`, `review-change`, `prepare-acceptance` | Execute the approved plan, prove acceptance criteria, adversarially review, package evidence. |
 | Consistency | `detect-drift`, `resolve-conflict`, `reconcile-docs` | Detect semantic divergence, surface human decision packets, update docs only after confirmed intent. |
 
-## Install locally with omp
+## Install
 
-From this repository root:
+### Individual skills with skills.sh
+
+Install the whole skill pack:
+
+```bash
+npx skills add dmltdev/intentdriven
+```
+
+Install only one skill:
+
+```bash
+npx skills add dmltdev/intentdriven --skill intentdriven
+npx skills add dmltdev/intentdriven --skill map-authority
+npx skills add dmltdev/intentdriven --skill verify-feature
+```
+
+Replace the skill name with any skill from the table above.
+
+### Local development with omp
+
+From the parent `plugins/` workspace:
 
 ```bash
 omp plugin marketplace add ./intentdriven
