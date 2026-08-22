@@ -1,0 +1,11 @@
+# local workspace state
+.DS_Store
+.env
+.env.*
+.crew/
+.lean-ctx/
+node_modules/
+
+# generated verification artifacts
+.test-results/
+coverage/

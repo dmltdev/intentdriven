@@ -1,0 +1,20 @@
+{
+  "name": "intentdriven-dev",
+  "description": "Development marketplace for IntentDriven agentic SDLC skills",
+  "owner": {
+    "name": "Dmytro L.",
+    "email": "dmltdev@proton.me"
+  },
+  "plugins": [
+    {
+      "name": "intentdriven",
+      "description": "Composable agent skills for Intent-Driven Development: preserving human intent from business specification through implementation, verification, drift detection, and acceptance evidence",
+      "version": "0.1.0",
+      "source": "./",
+      "author": {
+        "name": "Dmytro L.",
+        "email": "dmltdev@proton.me"
+      }
+    }
+  ]
+}
