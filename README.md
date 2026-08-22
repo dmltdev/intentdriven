@@ -48,10 +48,10 @@ Install from GitHub as a Claude Code plugin marketplace:
 /plugin install intentdriven@intentdriven
 ```
 
-Local development from the parent `plugins/` workspace:
+For local development, pass the path to your local clone:
 
 ```text
-/plugin marketplace add ./intentdriven
+/plugin marketplace add /path/to/intentdriven
 /plugin install intentdriven@intentdriven
 ```
 
@@ -84,10 +84,10 @@ omp plugin marketplace add dmltdev/intentdriven
 omp plugin install intentdriven@intentdriven
 ```
 
-Local development from the parent `plugins/` workspace:
+For local development, pass the path to your local clone:
 
 ```bash
-omp plugin marketplace add ./intentdriven
+omp plugin marketplace add /path/to/intentdriven
 omp plugin install intentdriven@intentdriven --force
 ```
 
@@ -100,10 +100,10 @@ codex plugin marketplace add dmltdev/intentdriven --ref main
 codex plugin add intentdriven@intentdriven
 ```
 
-Local development from the parent `plugins/` workspace:
+For local development, pass the path to your local clone:
 
 ```bash
-codex plugin marketplace add ./intentdriven
+codex plugin marketplace add /path/to/intentdriven
 codex plugin add intentdriven@intentdriven
 ```
 
