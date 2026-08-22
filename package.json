@@ -1,0 +1,21 @@
+{
+  "name": "intentdriven",
+  "version": "0.1.0",
+  "description": "Composable agent skills for Intent-Driven Development",
+  "license": "MIT",
+  "homepage": "https://github.com/dmltdev/intentdriven",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmltdev/intentdriven.git"
+  },
+  "keywords": [
+    "pi-package",
+    "skills",
+    "intent-driven-development",
+    "agentic-sdlc",
+    "semantic-drift"
+  ],
+  "pi": {
+    "skills": ["skills"]
+  }
+}

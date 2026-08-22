@@ -23,7 +23,7 @@ Intent -> Spec -> Domain Knowledge -> Decisions -> Implementation -> Evidence ->
 
 ## Install
 
-### Individual skills with skills.sh
+### skills.sh
 
 Install the whole skill pack:
 
@@ -31,23 +31,80 @@ Install the whole skill pack:
 npx skills add dmltdev/intentdriven
 ```
 
-Install only one skill:
+Install only the root workflow skill:
 
 ```bash
 npx skills add dmltdev/intentdriven --skill intentdriven
-npx skills add dmltdev/intentdriven --skill map-authority
-npx skills add dmltdev/intentdriven --skill verify-feature
 ```
 
-Replace the skill name with any skill from the table above.
+Replace `intentdriven` with any skill from the table above to install a narrower phase skill.
 
-### Local development with omp
+### Claude Code
 
-From the parent `plugins/` workspace:
+Install from GitHub as a Claude Code plugin marketplace:
+
+```text
+/plugin marketplace add dmltdev/intentdriven
+/plugin install intentdriven@intentdriven
+```
+
+Local development from the parent `plugins/` workspace:
+
+```text
+/plugin marketplace add ./intentdriven
+/plugin install intentdriven@intentdriven
+```
+
+### pi
+
+Install from GitHub with pi's package installer:
+
+```bash
+pi install git:github.com/dmltdev/intentdriven
+```
+
+Install project-locally, writing the package entry to `.pi/settings.json`:
+
+```bash
+pi install -l git:github.com/dmltdev/intentdriven
+```
+
+Run a one-off pi session with the package loaded:
+
+```bash
+pi -e git:github.com/dmltdev/intentdriven
+```
+
+### omp
+
+Install from GitHub as an omp plugin marketplace. See `https://omp.sh/docs/plugins` for omp's plugin marketplace workflow.
+
+```bash
+omp plugin marketplace add dmltdev/intentdriven
+omp plugin install intentdriven@intentdriven
+```
+
+Local development from the parent `plugins/` workspace:
 
 ```bash
 omp plugin marketplace add ./intentdriven
-omp plugin install intentdriven@intentdriven-dev --force
+omp plugin install intentdriven@intentdriven --force
+```
+
+### Codex
+
+Install from GitHub as a Codex plugin marketplace:
+
+```bash
+codex plugin marketplace add dmltdev/intentdriven --ref main
+codex plugin add intentdriven@intentdriven
+```
+
+Local development from the parent `plugins/` workspace:
+
+```bash
+codex plugin marketplace add ./intentdriven
+codex plugin add intentdriven@intentdriven
 ```
 
 ## Use

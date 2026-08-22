@@ -1,0 +1,20 @@
+{
+  "name": "intentdriven",
+  "interface": {
+    "displayName": "IntentDriven"
+  },
+  "plugins": [
+    {
+      "name": "intentdriven",
+      "source": {
+        "source": "local",
+        "path": "."
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "NONE"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

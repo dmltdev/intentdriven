@@ -1,0 +1,35 @@
+{
+  "name": "intentdriven",
+  "version": "0.1.0",
+  "description": "Composable agent skills for Intent-Driven Development: preserving human intent from business specification through implementation, verification, drift detection, and acceptance evidence",
+  "author": {
+    "name": "Dmytro L.",
+    "email": "dmltdev@proton.me"
+  },
+  "homepage": "https://github.com/dmltdev/intentdriven",
+  "repository": "https://github.com/dmltdev/intentdriven",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "intent-driven-development",
+    "agentic-sdlc",
+    "verification",
+    "semantic-drift",
+    "acceptance"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "IntentDriven",
+    "shortDescription": "Intent-Driven Development skills",
+    "longDescription": "Composable skills for carrying software from human intent through authority mapping, specification, implementation, verification, drift handling, and acceptance evidence.",
+    "developerName": "Dmytro L.",
+    "category": "Developer Tools",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://github.com/dmltdev/intentdriven",
+    "defaultPrompt": [
+      "Run IntentDriven for this feature request",
+      "Map source-of-truth authorities for this repository",
+      "Prepare acceptance evidence for this change"
+    ]
+  }
+}
