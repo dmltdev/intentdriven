@@ -9,7 +9,7 @@ Core invariant:
 The plugin turns a feature request into a gated chain:
 
 ```text
-Intent -> Spec -> Domain Knowledge -> Decisions -> Implementation -> Evidence -> Human Acceptance
+Intent -> Spec -> Domain Knowledge -> Decisions -> Implementation -> Evidence -> Human Acceptance -> Ownership
 ```
 
 ## Skills
@@ -20,6 +20,7 @@ Intent -> Spec -> Domain Knowledge -> Decisions -> Implementation -> Evidence ->
 | Decisions / Bridge | `reconcile-domain`, `record-decision`, `plan-implementation` | Keep vocabulary/domain/ADRs aligned and translate business intent into a technical plan. |
 | Execution / Evidence | `implement-feature`, `verify-feature`, `review-change`, `prepare-acceptance` | Execute the approved plan, prove acceptance criteria, adversarially review, package evidence. |
 | Consistency | `detect-drift`, `resolve-conflict`, `reconcile-docs` | Detect semantic divergence, surface human decision packets, update docs only after confirmed intent. |
+| Human Ownership | `own`, `own-report`, `own-visual` | Transfer completed AI-assisted work into the engineer's mental model for explaining, defending, debugging, modifying, extending, and discussing trade-offs without depending on the agent. |
 
 ## Install
 
@@ -109,7 +110,7 @@ codex plugin add intentdriven@intentdriven
 
 ## Use
 
-Invoke `/intentdriven` for an end-to-end feature lifecycle, or invoke a narrower skill directly when entering a known phase.
+Invoke `/intentdriven` for an end-to-end feature lifecycle, or invoke a narrower skill directly when entering a known phase. Use `own`, `own-report`, or `own-visual` after acceptance when the human needs to understand completed AI-assisted work well enough to maintain it.
 
 The expected state artifact is described in `skills/intentdriven/references/feature-state.md`.
 

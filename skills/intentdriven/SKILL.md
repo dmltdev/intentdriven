@@ -4,7 +4,7 @@ domain: intentdriven
 description: Use when the user invokes /intentdriven, asks for Intent-Driven Development, AI-native SDLC, agentic feature delivery, or wants agents to carry a feature from human intent through spec, implementation, verification, semantic-drift handling, and acceptance evidence.
 depends-on: []
 chains-to: null
-suggests: ["map-authority", "grill-feature", "write-spec", "reconcile-domain", "record-decision", "prototype-ui", "plan-implementation", "implement-feature", "verify-feature", "review-change", "detect-drift", "resolve-conflict", "reconcile-docs", "prepare-acceptance"]
+suggests: ["map-authority", "grill-feature", "write-spec", "reconcile-domain", "record-decision", "prototype-ui", "plan-implementation", "implement-feature", "verify-feature", "review-change", "detect-drift", "resolve-conflict", "reconcile-docs", "prepare-acceptance", "own", "own-report", "own-visual"]
 user-invokable: true
 ---
 
@@ -42,6 +42,7 @@ Use the shared state shape in `references/feature-state.md`. If the project alre
 11. **Conflict handling** — if non-trivial semantic drift exists, run `resolve-conflict` and stop at a human gate when intended behavior cannot be inferred safely.
 12. **Docs reconciliation** — run `reconcile-docs` only for decisions confirmed as intentional and only at the selected authority. Do not rewrite docs merely because code exists.
 13. **Acceptance package** — run `prepare-acceptance`. Provide AC status, commands, screenshots/states when UI exists, known limitations, and manual acceptance script.
+14. **Ownership transfer** — optionally run `own`, `own-report`, or `own-visual` after acceptance when the human needs to explain, defend, debug, modify, or extend the completed AI-assisted work without relying on the original agent.
 
 ## Gates
 
@@ -57,6 +58,7 @@ Use the shared state shape in `references/feature-state.md`. If the project alre
 | Drift -> Docs | No unresolved semantic conflict remains. |
 | Docs -> Acceptance | Documentation changes reflect confirmed intent only. |
 | Acceptance -> Done | Human acceptance evidence package is complete. |
+| Acceptance -> Ownership | Human wants a working mental model of completed AI-assisted work, not only acceptance evidence. |
 
 ## Source-of-truth split
 
@@ -86,5 +88,6 @@ Drift/conflicts:
 Docs reconciled:
 UI evidence:
 Manual acceptance script:
+Ownership transfer:
 Human decisions needed:
 ```

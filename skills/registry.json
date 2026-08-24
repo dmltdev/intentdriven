@@ -17,7 +17,10 @@
         "detect-drift",
         "resolve-conflict",
         "reconcile-docs",
-        "prepare-acceptance"
+        "prepare-acceptance",
+        "own",
+        "own-report",
+        "own-visual"
       ],
       "docs": ["skills/intentdriven/references/feature-state.md", "skills/intentdriven/references/docs-authority-profiles.md"]
     }
