@@ -1,6 +1,6 @@
 {
   "name": "intentdriven",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Composable agent skills for Intent-Driven Development: preserving human intent from business specification through implementation, verification, drift detection, and acceptance evidence",
   "author": {
     "name": "Dmytro L.",

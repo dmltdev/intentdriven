@@ -11,6 +11,7 @@
         "record-decision",
         "prototype-ui",
         "plan-implementation",
+        "collaborative-implementation",
         "implement-feature",
         "verify-feature",
         "review-change",
@@ -20,7 +21,8 @@
         "prepare-acceptance",
         "own",
         "own-report",
-        "own-visual"
+        "own-visual",
+        "intentdriven-install-skills"
       ],
       "docs": ["skills/intentdriven/references/feature-state.md", "skills/intentdriven/references/docs-authority-profiles.md"]
     }

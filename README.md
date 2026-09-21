@@ -11,16 +11,22 @@ The plugin turns a feature request into a gated chain:
 ```text
 Intent -> Spec -> Domain Knowledge -> Decisions -> Implementation -> Evidence -> Human Acceptance -> Ownership
 ```
+For clear intent and agent-led coding, use `collaborative-implementation`. The human approves consequential technical choices. The agent owns routine engineering, milestone commits, verification, and the concise mental-model handoff.
+
+IntentDriven uses DDD as a language and context discipline. Specifications stay concise, assign stable IDs to normative items, and use one central map from each ID to implementation and evidence.
+
 
 ## Skills
 
 | Group | Skills | Purpose |
 |---|---|---|
 | Intent | `intentdriven`, `map-authority`, `grill-feature`, `write-spec`, `prototype-ui` | Discover which local or external artifact owns each truth type, clarify product intent, write business contract, branch into UI prototypes when interaction choices matter. |
-| Decisions / Bridge | `reconcile-domain`, `record-decision`, `plan-implementation` | Keep vocabulary/domain/ADRs aligned and translate business intent into a technical plan. |
-| Execution / Evidence | `implement-feature`, `verify-feature`, `review-change`, `prepare-acceptance` | Execute the approved plan, prove acceptance criteria, adversarially review, package evidence. |
-| Consistency | `detect-drift`, `resolve-conflict`, `reconcile-docs` | Detect semantic divergence, surface human decision packets, update docs only after confirmed intent. |
-| Human Ownership | `own`, `own-report`, `own-visual` | Transfer completed AI-assisted work into the engineer's mental model for explaining, defending, debugging, modifying, extending, and discussing trade-offs without depending on the agent. |
+| Decisions / Bridge | `reconcile-domain`, `record-decision`, `plan-implementation` | Keep ubiquitous language, domain context, ADRs, and technical plans aligned with accepted intent. |
+| Collaborative Delivery | `collaborative-implementation` | Compare real approaches, obtain one risk-based approval, implement autonomously through verified milestone commits, and pause only for consequential deviations. |
+| Execution / Evidence | `implement-feature`, `verify-feature`, `review-change`, `prepare-acceptance` | Execute the approved plan, map stable specification IDs to evidence, review the result, and package acceptance evidence. |
+| Consistency | `detect-drift`, `resolve-conflict`, `reconcile-docs` | Detect semantic or traceability drift, surface human decision packets, and update docs only after confirmed intent. |
+| Human Ownership | `own`, `own-report`, `own-visual` | Build a mental model for explaining, defending, debugging, modifying, and extending completed AI-assisted work. |
+| Plugin Operations | `intentdriven-install-skills` | Reinstall this local plugin into Pi, OMP, Claude Code, and Codex with separate evidence for each harness. |
 
 ## Install
 
@@ -110,13 +116,16 @@ codex plugin add intentdriven@intentdriven
 
 ## Use
 
-Invoke `/intentdriven` for an end-to-end feature lifecycle, or invoke a narrower skill directly when entering a known phase. Use `own`, `own-report`, or `own-visual` after acceptance when the human needs to understand completed AI-assisted work well enough to maintain it.
+Invoke `/intentdriven` for the full lifecycle. Invoke `/collaborative-implementation` when accepted intent is clear and the agent should perform the coding after the human approves consequential technical choices. Invoke a narrower phase skill when entering a known phase.
 
-The expected state artifact is described in `skills/intentdriven/references/feature-state.md`.
+Every completed implementation includes a concise mental-model handoff. Use `own`, `own-report`, or `own-visual` when deeper ownership transfer is useful.
+
+The shared state and central traceability format are described in `skills/intentdriven/references/feature-state.md`.
 
 ## Boundary
 
-- Platform-agnostic by default. Linear, Jira, Confluence, Notion, local Markdown, ADRs, tests, schemas, and code are possible authorities for different truths.
-- Local project docs or agent instructions should define the source-of-truth boundary: truth type -> authority -> location/link -> write policy -> conflict policy.
-- The plugin recommends a minimum authority map when none exists, but does not enforce a file name, schema, docs platform, or product-management tool.
-- Drift between documented intent and implemented behavior is information. Agents must classify and surface it; they must not silently choose a winner.
+- Platform-neutral by default. Linear, Jira, Confluence, Notion, local Markdown, ADRs, tests, schemas, and code can own different kinds of truth.
+- Local project docs or agent instructions define each authority: truth type -> authority -> location/link -> write policy -> conflict policy.
+- When domain or vocabulary authority is missing and local docs are viable, the plugin recommends a replaceable DDD-lite fallback with a glossary, domain context, and context map.
+- Feature specifications stay separate from technical plans. Stable normative IDs connect the specification to implementation and evidence through one central traceability map.
+- Drift between documented intent and implemented behavior is information. Agents classify and surface it; they do not silently choose a winner.
