@@ -20,21 +20,26 @@ Update documentation to match confirmed intent, not merely current code.
 
 ## Process
 
-1. Read feature state, drift report, conflict resolutions, review findings, and implementation report.
-2. Confirm every documentation change is backed by accepted intent or explicit human decision.
+1. Read feature state, stable specification IDs, domain term/rule IDs, central traceability, drift report, conflict resolutions, review findings, and implementation report.
+2. Confirm every documentation change is backed by accepted intent or an explicit human decision.
 3. Update only the selected authority from the feature-state map:
-   - business/product spec at its configured authority,
-   - vocabulary at the selected glossary/ubiquitous-language authority,
-   - domain meaning/invariants at the selected domain authority,
-   - design rationale in ADRs or equivalent decision records,
+   - business/product spec at its configured authority;
+   - vocabulary at the selected glossary/ubiquitous-language authority;
+   - domain meaning, rules, and invariants at the selected domain authority;
+   - context ownership at the selected context-map authority;
+   - design rationale in ADRs or equivalent decision records;
    - implementation plan for technical bridge history when retained.
-4. Delete or replace stale local docs when they would create two authorities for one truth.
-5. Update links in feature state.
+4. Preserve stable IDs. Mark changed meaning as superseded or withdrawn. Do not renumber or reuse IDs.
+5. Update central traceability only for confirmed meaning and observed implementation/evidence.
+6. Delete or replace stale local docs when they would create two authorities for one truth.
+7. Update authority links in feature state.
 
 ## Output contract
 
 ```text
 Confirmed decisions used:
+Stable IDs changed:
+Traceability changed:
 Docs changed:
 Docs intentionally unchanged:
 Canonical sources referenced:
