@@ -11,7 +11,7 @@ The plugin turns a feature request into a gated chain:
 ```text
 Intent -> Spec -> Domain Knowledge -> Decisions -> Implementation -> Evidence -> Human Acceptance -> Ownership
 ```
-For clear intent and agent-led coding, use `collaborative-implementation`. The human approves consequential technical choices. The agent owns routine engineering, milestone commits, verification, and the concise mental-model handoff.
+For one bounded, local, reversible milestone, `/intentdriven` automatically uses a small-work route with an embedded intent contract. For clear intent and non-trivial agent-led coding, it uses `collaborative-implementation`. The human approves consequential technical choices. The agent owns routine engineering, milestone commits, verification, and the concise mental-model handoff.
 
 IntentDriven uses DDD as a language and context discipline. Specifications stay concise, assign stable IDs to normative items, and use one central map from each ID to implementation and evidence.
 
@@ -116,11 +116,11 @@ codex plugin add intentdriven@intentdriven
 
 ## Use
 
-Invoke `/intentdriven` for the full lifecycle. Invoke `/collaborative-implementation` when accepted intent is clear and the agent should perform the coding after the human approves consequential technical choices. Invoke a narrower phase skill when entering a known phase.
+Invoke `/intentdriven` for automatic route selection. Small work uses one plan with an embedded intent contract. Clear, non-trivial work uses `collaborative-implementation`. Ambiguous or consequential work uses the full lifecycle. Invoke a narrower phase skill when entering a known phase.
 
 Every completed implementation includes a concise mental-model handoff. Use `own`, `own-report`, or `own-visual` when deeper ownership transfer is useful.
 
-The shared state and central traceability format are described in `skills/intentdriven/references/feature-state.md`.
+The detailed feature, task, bugfix, and refactor workflow is described in `skills/intentdriven/references/development-workflow.md`. The shared state and central traceability format are described in `skills/intentdriven/references/feature-state.md`.
 
 ## Boundary
 

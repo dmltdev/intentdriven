@@ -24,7 +24,11 @@
         "own-visual",
         "intentdriven-install-skills"
       ],
-      "docs": ["skills/intentdriven/references/feature-state.md", "skills/intentdriven/references/docs-authority-profiles.md"]
+      "docs": [
+        "skills/intentdriven/references/development-workflow.md",
+        "skills/intentdriven/references/feature-state.md",
+        "skills/intentdriven/references/docs-authority-profiles.md"
+      ]
     }
   }
 }
