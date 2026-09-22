@@ -21,8 +21,11 @@ Intent -> Spec -> Domain Knowledge -> Decisions -> Implementation -> Evidence ->
 | Execution / Evidence | `implement-feature`, `verify-feature`, `review-change`, `prepare-acceptance` | Execute the approved plan, prove acceptance criteria, adversarially review, package evidence. |
 | Consistency | `detect-drift`, `resolve-conflict`, `reconcile-docs` | Detect semantic divergence, surface human decision packets, update docs only after confirmed intent. |
 | Human Ownership | `own`, `own-report`, `own-visual` | Transfer completed AI-assisted work into the engineer's mental model for explaining, defending, debugging, modifying, extending, and discussing trade-offs without depending on the agent. |
+| Operations | `install-intentdriven` | Install or verify this local plugin across Pi, OMP, Claude Code, and Codex with per-target evidence. |
 
 ## Install
+
+After changing skills or manifests in a local checkout, invoke `install-intentdriven` to validate aligned versions, install each available harness, and report source, version, and activation evidence.
 
 ### skills.sh
 
