@@ -9,11 +9,8 @@
     {
       "name": "intentdriven",
       "description": "Composable agent skills for Intent-Driven Development: preserving human intent from business specification through implementation, verification, drift detection, and acceptance evidence",
-      "version": "0.2.0",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/dmltdev/intentdriven.git"
-      },
+      "version": "0.4.0",
+      "source": "./",
       "author": {
         "name": "Dmytro L.",
         "email": "dmltdev@proton.me"

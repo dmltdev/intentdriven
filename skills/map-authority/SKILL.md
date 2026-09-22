@@ -27,7 +27,9 @@ The plugin is platform-agnostic. Linear, Jira, Confluence, Notion, local Markdow
 1. Read existing local conventions before proposing anything: README, docs index, domain/glossary/ADR docs, product links, project agent instructions already in context, and feature state if present.
 2. Identify authorities by truth type, not by platform:
    - should happen / business intent,
-   - vocabulary / domain meaning,
+   - vocabulary / ubiquitous language,
+   - domain meaning and invariants,
+   - context relationships,
    - why designed,
    - implementation plan,
    - actual behavior,
@@ -38,9 +40,10 @@ The plugin is platform-agnostic. Linear, Jira, Confluence, Notion, local Markdow
    - **implicit** — strongly implied by repo layout or linked artifacts,
    - **missing** — no reliable authority found,
    - **conflicting** — two editable sources claim the same truth.
-4. If missing/conflicting authority affects a non-trivial feature, ask for a precise human decision with recommended options.
-5. If the project lacks an authority map, recommend adding one to an existing local source of instructions/docs. Do not invent a new format unless the user asks.
-6. Record the selected authority map in feature state.
+4. If a missing/conflicting authority affects product meaning, ask for one precise human decision with recommended options.
+5. If the project lacks an authority map, add the minimum map to an existing local source of instructions/docs.
+6. When no domain or vocabulary authority exists, recommend the DDD local-docs fallback in `../intentdriven/references/docs-authority-profiles.md`. Use it only when local repository docs are viable. Existing conventions and explicit external authorities still win.
+7. Record the selected authority map in feature state.
 
 ## Recommended minimum shape
 
@@ -54,12 +57,14 @@ Example:
 
 ```text
 Business intent -> Product workspace -> linked issue/doc -> update there -> human decides semantic drift
-Vocabulary -> docs/glossary.md -> repo -> update in PR -> reject parallel terms
-Architecture decisions -> docs/adr/ -> repo -> append ADR -> supersede, don't rewrite
-Actual behavior -> code/schemas/config -> repo -> implementation PR -> tests prove behavior
+Vocabulary -> docs/glossary.md -> update accepted terms -> reject parallel terms
+Domain meaning -> docs/domain/<context>.md -> update accepted rules/invariants -> surface conflicts
+Context relationships -> docs/context-map.md -> update cross-context ownership -> human decides boundary ambiguity
+Architecture decisions -> docs/adr/ -> append ADR -> supersede, don't rewrite
+Actual behavior -> code/schemas/config -> implementation change -> tests prove behavior
 ```
 
-Optional profile: if the repository uses DDD-shaped local docs, apply `references/docs-authority-profiles.md` as a recommendation, not a mandate.
+Fallback profile: when the repository has no domain/vocabulary authority and local docs are viable, recommend `references/docs-authority-profiles.md`. It is a default proposal, not a mandate.
 
 ## Output contract
 
@@ -77,4 +82,4 @@ Feature-state update:
 
 ## Verification gate
 
-Before proceeding to `write-spec`, the feature state must record at least the authority for business intent, vocabulary/domain meaning, decisions, actual behavior, and behavioral proof. Missing authority can remain only when it is irrelevant to the current change or explicitly accepted as a risk.
+Before proceeding to `write-spec`, feature state must record at least the authority for business intent, vocabulary, domain meaning, decisions, actual behavior, and behavioral proof. Missing authority can remain only when it is irrelevant to the current change or explicitly accepted as a risk.

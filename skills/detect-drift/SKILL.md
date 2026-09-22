@@ -20,22 +20,25 @@ Find semantic divergence without deciding which truth wins.
 
 ## Process
 
-1. Gather authorities from feature state or project convention: business/spec authority, domain/vocabulary authority, decision records, implementation plan, tests, schemas, code, verification evidence, runtime/telemetry when relevant.
-2. Compare by question:
+1. Gather authorities from feature state or project convention: business/spec authority, normative IDs, glossary term slugs, domain rule IDs, context ownership, decision records, implementation plan, traceability, tests, schemas, code, verification evidence, and runtime/telemetry when relevant.
+2. Compare by stable ID and question:
    - What should happen?
+   - What does this term mean, and which context owns it?
    - Why was it designed this way?
-   - What does this term mean?
    - How was it planned?
-   - What actually happens?
+   - Where is it implemented?
    - What can be demonstrated?
+   - What happens at runtime?
 3. Classify divergence:
-   - **none** — sources agree.
-   - **mechanical** — stale link/name/path, safe to reconcile.
-   - **technical-detail** — docs omit implementation detail, no business impact.
-   - **semantic** — expected business behavior differs from implementation/tests/runtime.
+   - **none** — sources agree;
+   - **mechanical** — stale link/name/path, safe to reconcile;
+   - **technical-detail** — docs omit implementation detail, no product impact;
+   - **semantic** — accepted meaning differs from implementation, tests, or runtime;
+   - **traceability-gap** — an active normative ID lacks a clear implementation or evidence anchor;
    - **unknown** — insufficient evidence.
-4. For semantic/unknown conflicts, produce evidence and route to `resolve-conflict`.
-5. For mechanical conflicts, list safe reconciliation actions.
+4. For semantic or unknown conflicts, produce evidence and route to `resolve-conflict`.
+5. For a traceability gap, return the missing implementation or evidence obligation. Do not change the specification to match code.
+6. For mechanical conflicts, list safe reconciliation actions.
 
 ## Output contract
 
@@ -45,6 +48,7 @@ Drift summary:
 Mechanical drift:
 Technical-detail drift:
 Semantic conflicts:
+Traceability gaps:
 Unknowns:
 Evidence:
 Recommended next skill:
