@@ -30,6 +30,8 @@ IntentDriven uses DDD as a language and context discipline. Specifications stay 
 
 ## Install
 
+After changing skills or manifests in a local checkout, invoke `intentdriven-install-skills` to validate aligned versions, install each available harness, and report source, version, and activation evidence.
+
 ### skills.sh
 
 Install the whole skill pack:
