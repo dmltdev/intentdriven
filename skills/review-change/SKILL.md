@@ -20,30 +20,30 @@ Attempt to disprove correctness. Review receives requirements and diff, not the 
 
 ## Process
 
-1. Read spec, acceptance criteria, domain docs/glossary, ADRs, implementation plan, diff, and verification evidence.
-2. Review requirement coverage criterion by criterion.
-3. Inspect for incorrect assumptions, architecture violations, missing edge cases, accidental scope expansion, security/privacy issues, performance hazards, migration/rollback risk, and weak tests.
+1. Read normative specification items, central traceability, domain docs/glossary, ADRs, approved implementation plan, milestone commits, diff, and verification evidence.
+2. Review coverage ID by ID. Check that each implementation anchor and evidence item proves the stated meaning.
+3. Inspect for incorrect assumptions, architecture violations, missing edge cases, accidental scope expansion, security/privacy issues, performance hazards, migration/rollback risk, weak tests, and unnecessary complexity.
 4. Classify findings:
-   - **BLOCKER** — spec violation, broken behavior, unsafe change, missing required evidence.
+   - **BLOCKER** — specification violation, broken behavior, unsafe change, missing required evidence.
    - **CONCERN** — should fix or consciously accept.
    - **NIT** — low-risk polish.
-5. Require evidence anchors: file paths, test names, command output, or spec criteria.
-6. Update feature state with blockers and concerns.
+5. Require evidence anchors: normative IDs, file paths, symbols, test names, command output, or runtime observations.
+6. Update feature state with blockers and concerns. Do not change accepted specification meaning.
 
 ## Output contract
 
 ```text
 Verdict: pass/block
-Requirement coverage:
+Specification coverage:
 Blockers:
 Concerns:
 Test quality findings:
 Security/performance findings:
-Architecture findings:
+Architecture/complexity findings:
 Evidence anchors:
 Ready for detect-drift: yes/no
 ```
 
 ## Verification gate
 
-No PASS if any acceptance criterion lacks credible evidence or any blocker remains unresolved.
+No PASS if any active normative specification ID lacks credible implementation and evidence anchors, or if any blocker remains unresolved.
